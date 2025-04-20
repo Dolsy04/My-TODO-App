@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, #6A11CB, #2575FC);
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+.droping {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    opacity: 0.8;
+}
+
+.drop1 {
+    top: 90%;
+    left: 10%;
+    animation: moveDown 5s linear infinite;
+}
+
+.drop2 {
+    top: 90%;
+    left: 90%;
+    animation: moveDown 5s linear infinite;
+}
+@keyframes moveDown {
+    0%, 100% { transform: translateY(-80vh); }
+    50%{ transform: translateY(0); }
+}
+
+.drop3 {
+    top: 8%;
+    left: 10%;
+    animation: moveUp 5s linear infinite;
+}
+.drop4 {
+    top: 8%;
+    left: 90%;
+    animation: moveUp 5s linear infinite;
+}
+@keyframes moveUp {
+    0%,100%  { transform: translateY(90vh); }
+    50%{ transform: translateY(0); }
+}
+
+
+.drop5 {
+    top: 50%;
+    left: 0%;
+    animation: moveRandom 6s linear infinite;
+}
+
+@keyframes moveRandom {
+    0%,100% { transform: translateX(90vw); }
+    50% { transform: translateX(0); }
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.welcome-section{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}
+.welcome-section h1{
+    color: #ffffff;
+    font: 600 40px 'poppins';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.welcome-section div{
+    margin-top: 20px;
+}
+.welcome-section p{
+    font: 600 18px 'mulish';
+    line-height: 1.5;
+    color: #E0E0E0;
+}
+.welcome-section .button-container{
+    width: 50%;
+    margin: 30px auto 0;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+.welcome-section .button-container .button-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.welcome-section .button-container .button-item button{
+    padding: 10px 20px;
+    font: 400 18px 'mulish';
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #007BFF;
+    color: #f5ebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.welcome-section .button-container .button-item button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: #0056b3;
+}
+
+.welcome-section .button-container .button-item button i{
+    font-size: 25px;
+    color: #f5ebeb;
+}
+.welcome-section .button-container .button-item button:nth-child(2){
+    background: transparent;
+    border: 1px solid #007BFF;
+    transition: all 0.3 ease-in-out;
+}
+.welcome-section .button-container .button-item button:nth-child(2):hover{
+    background: #0056b3;
+    border: none;
+}
+/* ============sign=up=in================ */
+.sign-up-in{
+    width: 100%;
+    height: 100vh;
+    background: #000000ad;
+    position: fixed;
+    top: -1600px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+.sign-up-in.active{
+    top: 0;
+}
+.sign-up-in-container{
+    background: whitesmoke;
+    width: 40%;
+    height: 75%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 6px;
+}
+.sign-up-header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-sign-up{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.sign-up-in-container h2{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font: 600 24px 'mulish';
+}
+.sign-up-form{
+    width: 70%;
+    margin: 0 auto;
+}
+.sign-up-form label{
+    font: 500 16px 'mulish';
+    margin-left: 5px;
+}
+.password-toggle-container{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    margin: 5px 0 0px;
+    border-radius: 6px;
+    border: 1px solid #80808075;
+    overflow: hidden;
+}
+.toggle-password-container{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1px;
+    cursor: pointer;
+}
+.toggle-icon{
+    width: 100%;
+    object-fit: cover;
+}
+.sign-up-form input[type = email], .sign-up-form input[type = text]{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 0px;
+    border-radius: 6px;
+    border: 1px solid #80808075;
+    outline: none;
+    padding: 0 8px;
+    font: 500 17px 'mulish';
+}
+.sign-up-form input[type = password], #password{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: none;
+    padding: 0 8px;
+    font: 500 17px 'mulish';
+}
+.sign-up-form input:focus{
+    border: 1px solid blue;
+}
+.create-acct-btn{
+    margin-left: 10px;
+    padding: 10px 20px;
+    font: 500 18px 'mulish';
+    border: none;
+    border-radius: 6px;
+    background: green;
+    color: #f5ebeb;
+    cursor: pointer;
+}
+.feedback{
+    color: red;
+    font: 500 16px 'mulish';
+    margin: 0 0 20px 5px;
+}
+.sign-up-note{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font: 400 16px 'mulish';
+}
+.sign-up-note button{
+    border: none;
+    background: transparent;
+    color: blue;
+    font: 400 16px 'mulish';
+    cursor: pointer;
+}
+/* ===========sign=in============= */
+.sign-in{
+    width: 100%;
+    height: 100vh;
+    background: #000000ad;
+    position: fixed;
+    top: 1600px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+.sign-in.active{
+    top: 0;
+}
+.sign-in-container{
+    background: whitesmoke;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 6px;
+}
+.sign-in-header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-sign-in{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.sign-in-container h2{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font: 600 24px 'mulish';
+}
+.sign-in-form{
+    width: 70%;
+    margin: 0 auto;
+}
+.sign-in-container label{
+    font: 500 16px 'mulish';
+    margin-left: 5px;
+}
+.password-toggle-container{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    margin: 5px 0 0px;
+    border-radius: 6px;
+    border: 1px solid #80808075;
+}
+.toggle-password-container{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1px;
+    cursor: pointer;
+}
+.toggle-icon{
+    width: 100%;
+    object-fit: cover;
+}
+.sign-in-container input[type = email]{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 0px;
+    border-radius: 6px;
+    border: 1px solid #80808075;
+    outline: none;
+    padding: 0 8px;
+    font: 500 17px 'mulish';
+}
+.sign-in-container input[type = password],  .sign-in-container input[type = text]{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    outline: none;
+    padding: 0 8px;
+    font: 500 17px 'mulish';
+}
+.sign-in-container input:focus{
+    border: 1px solid blue;
+}
+
+.reset-password-login-btn-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-btn{
+    margin-left: 5px;
+    padding: 10px 20px;
+    font: 500 18px 'mulish';
+    border: none;
+    border-radius: 6px;
+    background: green;
+    color: #f5ebeb;
+    cursor: pointer;
+}
+.reset-password{
+    color: blue;
+    font: 500 16px 'mulish';
+    border: none;
+    padding: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+.sign-in-note{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font: 400 16px 'mulish';
+}
+.sign-in-note button{
+    border: none;
+    background: transparent;
+    color: blue;
+    font: 400 16px 'mulish';
+    cursor: pointer;
+}
+/* =================forgetten-password========= */
+.forgotten-password{
+    width: 100%;
+    height: 100vh;
+    background: #000000ad;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    display: none;
+}
+.forgotten-password.active{
+    display: flex;
+}
+.inner-forgotten-password{
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.forgotten-password-container{
+    background: whitesmoke;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 6px;
+    
+}
+.close-forgotten-password{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.forgotten-password-container .forgotten-password-inst{
+    width: 100%;
+    text-align: center;
+    font: 500 18px 'mulish';
+    padding: 0 0 10px;
+}
+.forgotten-password-container h2{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 10px;
+    font: 600 24px 'mulish';
+}
+.forgotten-password-container label{
+    margin-left: 18px;
+    font: 500 18px 'mulish';
+}
+.forgotten-password-container input{
+    margin: 5px 0 0 15px;
+    width: 80%;
+    height: 40px;
+    border: 1px solid #80808075;
+    outline: none;
+    padding: 0 8px;
+    font: 500 18px 'mulish';
+    border-radius: 6px;
+}
+.forgotten-password-container input:focus{
+    border: 2px solid blue;
+}
+.forgotten-password-response{
+    margin-left: 15px;
+    text-transform: capitalize;
+}
+.reset-btn{
+    margin: 0 0 10px 15px;
+    padding: 10px 20px;
+    font: 500 18px 'mulish';
+    border: none;
+    border-radius: 6px;
+    background: green;
+    color: #f5ebeb;
+    cursor: pointer;
+}
+.sent-email-response-container {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;   
+}
+.sent-email-response{
+    font: 500 17px 'mulish';
+    color: #045c04;
+}
+/* ===========loader============= */
+.loader-section{
+    width: 100%;
+    height: 100vh;
+    background: #f5f5f5ad;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.loader-section.active{
+    display: block;
+}
+.inner-loader-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loader-container{
+    /* background: whitesmoke; */
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+}
+.loader-list-container, .loader-list-2-container, .loader-list-3-container{
+    background: whitesmoke;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 0px 30px #0000007d;
+    padding-top: 20px;
+    display: none;
+}
+.loader-list-container.active, .loader-list-2-container.active, .loader-list-3-container.active{
+    display: block;
+}
+
+.loader-list, .loader-list-2, .loader-list-3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid lightblue;
+    border-right-color: orange;
+    animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+.loading-text{
+    font: 500 18px 'mulish';
+    text-align: center;
+}
+
+/* ======check mark========== */
+
+.marker-container{
+    background: orange;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.maker, .error{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 5px 0 0 0px;
+}
+.marker-bar, .error-bar{
+    width: 40px;
+    height: 3px;
+    background: white;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.marker-bar:nth-child(1){
+    width: 22px;
+    transform: rotate(-90deg) translateY(5px) translateX(-17px);
+}
+.marker-bar:nth-child(2){
+    width: 45px;
+    transform: rotate(-25deg) translateX(10px) translateY(10px);
+}
+.redirecting-text{
+    color: gray;
+    font: 500 15px 'mulish';
+}
+
+.error-container{
+    width: 30%;
+    height: 60px;
+}
+.error{
+    background: red;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.error-bar:nth-child(1){
+    transform: translateY(16px) rotate(-40deg);
+}
+.error-bar:nth-child(2){
+   opacity: 0;
+}
+.error-bar:nth-child(3){
+    transform: translateY(-10px) rotate(40deg);
+}
+.exit{
+    margin: 10px 0;
+    padding: 8px 20px;
+    font: 500 18px 'mulish';
+    background: #f0860e;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .droping {
+        z-index: 999;
+    }
+    .welcome-section h1 {
+        font-size: 30px;
+    }
+    .welcome-section .button-container {
+        width: 80%;
+    }
+    .sign-up-in-container {
+        width: 80%;
+        height: 90%;
+    }
+    .sign-in-container {
+        width: 80%;
+        height: 75%;
+    }
+    .inner-forgotten-password {
+        width: 60%;
+    }
+    .loader-list-container, .loader-list-2-container, .loader-list-3-container {
+        width: 70%;
+        height: 80%;
+        
+    }
+}
+@media screen and (max-width: 767px){
+    /* .droping {
+        z-index: 999;
+    } */
+    .welcome-section {
+        width: 98%;
+    }
+    .welcome-section h1 {
+        font-size: 22px;
+    }
+    .welcome-section p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .welcome-section .button-container {
+        width: 90%;
+    }
+    .welcome-section .button-container .button-item {
+        flex-direction: column;
+    }
+    .welcome-section .button-container .button-item button {
+        width: 100%;
+    }
+    .sign-up-in-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .sign-up-form {
+        width: 90%;
+    }
+    .sign-in-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .sign-in-container h2 {
+        padding: 30px 0 20px;
+        font-size: 22px;
+    }
+    .sign-in-form {
+        width: 90%;
+    }
+    .reset-password {
+       font-size: 15px;
+    }
+    .login-btn {
+        margin-left: 5px;
+        padding: 10px 30px;
+    }
+    .forgotten-password-container {
+        border-radius: 0;
+    }
+    .inner-forgotten-password {
+        width: 100%;
+    }
+    .forgotten-password-container input {
+        width: 90%;
+    }
+    .loader-container {
+        width: 70%;
+    }
+    .loader-list-container, .loader-list-2-container, .loader-list-3-container {
+        width: 100%;
+        height: 80%;
+    }
+}

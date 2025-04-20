@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP / my-profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <aside>
+        <img src="./icon-image/close.png" alt="menu-bar-icon" width="50" class="close-menu">
+        <div class="aside-container">
+            <div class="aside-header">
+                <div class="title-container">
+                    <h1>TODO APP</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="todo.html"><i class='bx bx-home-circle'></i> Home</a></li>
+                    <li><a href="appearance.html"><i class='bx bx-moon' ></i> App Apperance</a></li>
+                    <li><a class="active" href="profile.html"><i class='bx bx-user-circle'></i> Profile</a></li>
+                </ul>
+            </nav>
+            <div class="logout-container">
+                <button class="logout-btn"><i class='bx bx-log-out'></i> Logout</button>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; <span class="copyright-year">2022</span> TODO APP - All Right Reserved</p>
+        </footer>
+    </aside>
+    <main>
+        <header>
+            <img src="./icon-image/menu-bar-icon.png" alt="menu-bar-icon"class="menu-icon">
+            <h1 class="todo-header-text">My Profile</h1>
+        </header>
+        <div class="profile-container">
+            <div class="inner-profile-container">
+                <div class="profile-item">
+                    <div class="profile-image">
+                        <img src="" alt="" class="profile-img">
+                    </div>
+                    <div class="profile-user-details">
+                        <p class="profile-user-name"></p>
+                        <p class="profile-email"></p>
+                    </div>
+                    <div class="profile-button-container">
+                        <button class="Uploadpopup">Upload profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="set-profile-container">
+            <div class="set-inner-profile-container">
+                <div class="set-inner-profile-card">
+                    <div class="set-profile-item">
+                        <div class="set-profile-image">
+                            <img src="" alt="" class="set-profile-img">
+                        </div>
+                        <div class="set-profile-user-details">
+                            <label for="collect-profile-pic">Select an image</label><br>
+                            <input type="file" id="collect-profile-pic" accept="image/*">
+                        </div>
+                        <div class="set-profile-button-container">
+                            <button class="set-upload-pic">Upload profile</button>
+                            <button class="exit-page">Exit Page</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="profile.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

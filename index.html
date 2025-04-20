@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <span class="droping drop1"></span>
+    <span class="droping drop2"></span>
+    <span class="droping drop3"></span>
+    <span class="droping drop4"></span>
+    <span class="droping drop5"></span>
+
+    <main>
+        <section class="welcome-section">
+                <h1>Welcome to my todo app</h1>
+                <div>
+                    <p>Stay organized effortlessly with our intuitive task management system.</p>
+                    <p>Easily create, edit, and delete tasks in just a few clicks—boost your productivity like never before! </p>
+
+                </div>
+                <div class="button-container">
+                    <div class="button-item">
+                        <button class="getStarted">Get Started <i class='bx bx-right-arrow-alt'></i></button>
+                        <button class="sign-in-btn">Sign In <i class='bx bx-right-arrow-alt'></i></button>
+                    </div>
+                </div>
+        </section>
+        <section class="sign-up-in">
+            <div class="sign-up-in-container">
+                <div class="sign-up-header">
+                    <h2>Sign up or create an account</h2>
+                    <img src="./icon-image/close.png" width="40" alt="close sign up section" class="close-sign-up">
+                </div>
+                
+                <div class="sign-up-form">
+                    <label for="username">Username</label><br>
+
+                    <input type="text" id="username" name="username" placeholder="Doe"><br>
+
+                    <p class="userName-response feedback"></p>
+
+                    <label for="email">Email</label><br>
+
+                    <input type="email" id="email" name="email" placeholder="your@gmail.com"><br>
+
+                    <p class="email-response feedback"></p>
+
+                    <label for="password">Password</label><br>
+                    <div class="password-toggle-container">
+                        <input type="password" id="password" name="password" placeholder="Password"><br>
+                        <div class="toggle-password-container">
+                            <img src="./icon-image/show-password.png" width="30" class="toggle-icon sign-up-toggle-icon" alt="toggle show and hide password icon">
+                        </div>
+                    </div>
+                    
+
+                    <p class="password-response feedback"></p>
+
+                    <button class="create-acct-btn">Sign up</button>
+                </div>
+                <p class="sign-up-note">Already have an account <button class="sign-in-btn">Sign In</button></p>
+            </div>
+        </section>
+        <section class="sign-in">
+            <div class="sign-in-container">
+                <div class="sign-in-header">
+                    <h2>Sign in or Login into your account</h2>
+                    <img src="./icon-image/close.png" width="40" alt="close sign up section" class="close-sign-in">
+                </div>
+                
+                <div class="sign-in-form">
+                    <label for="username">Email</label><br>
+
+                    <input type="email" id="sign-in-identifier" name="email" placeholder="your@gmail.com"><br>
+
+                    <p class="email-sign-in-response feedback"></p>
+
+                    <label for="password">Password</label><br>
+                    <div class="password-toggle-container">
+                        <input type="password" id="sign-password" name="password" placeholder="Password"><br>
+                        <div class="toggle-password-container">
+                            <img src="./icon-image/show-password.png" width="30" class="toggle-icon sign-in-toggle-icon" alt="toggle show and hide password icon">
+                        </div>
+                    </div>
+
+                    <p class="password-sign-in-response feedback"></p>
+                    <div class="reset-password-login-btn-container">
+                        <button class="login-btn">Sign in</button>
+                        <button class="reset-password">Forgotten Password</button>
+                    </div>
+                </div>
+                <p class="sign-in-note">Do not have an account <button class="sign-up-btn">Sign up</button></p>
+            </div>
+        </section>
+        <section class="forgotten-password">
+            <div class="inner-forgotten-password">
+                <img src="./icon-image/close.png" width="40" alt="close sign up section" class="close-forgotten-password">
+                <div class="forgotten-password-container">
+                    <h2>Reset Password</h2>
+                    <p class="forgotten-password-inst">Input your email used for Sign-In</p>
+    
+                    <label for="forgotten-password-email">Email</label>
+                    <input type="email" id="forgotten-password-input" placeholder="your@gmail.com">
+                    <p class="forgotten-password-response feedback"></p>
+                    <button class="reset-btn">Reset Password</button>
+    
+                    <div class="sent-email-response-container">
+                        <p class="sent-email-response"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="loader-section">
+            <div class="inner-loader-section">
+                <div class="loader-container">
+                    <div class="loader-list-container">
+                        <div class="loader-list">
+                            <div class="loader"></div>
+                            <p class="loading-text">LOADING....</p>
+                        </div>
+                    </div>
+                    
+                    <div class="loader-list-2-container">
+                        <div class="loader-list-2">
+                            <div class="marker-container">
+                                <div class="maker">
+                                    <span class="marker-bar"></span>
+                                    <span class="marker-bar"></span>
+                                </div>
+                            </div>
+                            <p class="loading-text">Successfull...</p>
+                            <p class="redirecting-text">Redirecting...<span class="redirecting-count">5</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="loader-list-3-container">
+                        <div class="loader-list-3">
+                            <div class="error-container">
+                                <div class="error">
+                                    <span class="error-bar"></span>
+                                    <span class="error-bar"></span>
+                                    <span class="error-bar"></span>
+                                </div>
+                            </div>
+                            <p class="loading-text">Error: <span class="response-data"></span></p>
+                            <button class="exit">Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- From Uiverse.io by Praashoo7 --> 
+
+    </main>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

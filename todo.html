@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="todo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <aside>
+        <img src="./icon-image/close.png" alt="menu-bar-icon" width="50" class="close-menu">
+        <div class="aside-container">
+            <div class="aside-header">
+                <div class="title-container">
+                    <h1>TODO APP</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="active" href="todo.html"><i class='bx bx-home-circle'></i> Home</a></li>
+                    <li><a href="appearance.html"><i class='bx bx-moon' ></i> App Appearance</a></li>
+                    <li><a href="profile.html"><i class='bx bx-user-circle'></i> Profile</a></li>
+                </ul>
+            </nav>
+            <div class="logout-container">
+                <button class="logout-btn"><i class='bx bx-log-out'></i> Logout</button>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; <span class="copyright-year"></span> TODO APP - All Right Reserved</p>
+        </footer>
+    </aside>
+    <main>
+        <header>
+            <img src="./icon-image/menu-bar-icon.png" alt="menu-bar-icon" class="menu-icon">
+            <h1 class="todo-header-text">TODO APP</h1>
+        </header>
+        <div class="todo-container">
+            <h2>Add a Todo</h2>
+            <div class="todo-item">
+                <input type="text" placeholder="Input a todo" id="todo-input"><br>
+                <div class="button-container">
+                    <button class="add-todo-btn">Add Todo</button>
+                </div>
+                <div class="edit-task-container">
+                    <div class="edit-task">
+                        <img src="./icon-image/close.png" width="30" class="close-new-task" alt="">
+                        <h2>Edit Task</h2>
+                        <p>Input a new task</p>
+                        <label>New Task</label><br>
+                        <input type="text" name="" id="edit-task-input">
+                        <div class="edit-task-btn">
+                            <button class="edit-btn-list">Add List</button>
+                        </div>
+                        <p class="edit-responds hidden"></p>
+                    </div>
+                </div>
+                <p class="responds hidden"></p>
+                <div class="display-container">
+                    <ul class="display-todo">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="todo.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
